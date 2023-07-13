@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Car Parking Lot</title>
+    <link href="../static/css/model.css" rel="stylesheet">
+    <style>
+      .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100% - 90px);
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .video-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+
+      .video-btn:hover {
+        background-color: #45a049;
+      }
+
+      .video-btn:active {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="full-page" method="post">
+      <div class="navbar" style="padding-top: 15px;padding-bottom: 25px;">
+        <h1 style="margin-left: 100px;">Welcome {{firstname}} !!</h1>
+        <nav style="margin-right: 100px;">
+          <ul>
+            <li><a href="{{url_for('userhome')}}">Home</a></li>
+            <li><a href="{{url_for('userabout')}}">About</a></li>
+            <li><a href="{{url_for('index')}}">Logout</a> </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="video-container">
+        <br>
+        <button class="video-btn" id="statusButton" onclick="showOutput()">Check the Status</button>
+        <div id="output" class="hidden">
+          <img src="{{url_for('video_feed_endpoint')}}" alt="Model Output" width="1080" height="610" controls loop>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showOutput() {
+        var button = document.getElementById("statusButton");
+        var output = document.getElementById("output");
+        button.style.display = "none";
+        output.classList.remove("hidden");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   .full-page {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../img/pricing-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+   }
+   .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+   }
+   .navbar h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Roboto",sans-sserif;
+   }
+   nav {
+    flex: 1;
+    text-align: right;
+   }
+   nav ul {
+    display: inline-block;
+    list-style: none;
+   }
+   nav ul li {
+    display: inline-block;
+    margin-right: 39px;
+   }
+   nav ul li a {
+    text-decoration: none;
+    font-size: 19px;
+    color: white;
+    font-family: "Roboto",sans-serif;
+    font-weight: revert;
+    text-transform: uppercase;
+   }
+   nav ul li button {
+    font-size: 18px;
+    color: white;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: "Roboto",sans-serif;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 30px;
+   }
+   nav ul li button:hover {
+    background-color: #ff5e1c;
+   }
+   nav ul li a:hover {
+    color: white;
+   }
+   .video-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+   }
+   .video-btn button {
+    font-size: 24px;
+    color: white;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-family: "Roboto",sans-serif;
+    text-transform: uppercase;
+    padding: 20px 30px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out;
+   }
+   .video-btn button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+   }

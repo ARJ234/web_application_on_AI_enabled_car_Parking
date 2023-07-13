@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+      <!-- Basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Sign Up</title>
+
+    <link rel="stylesheet" href="../static/css/style1.css">
+    <!---we had linked our css file----->
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href="{{url_for('index')}}" style="margin-left: 100px;">AI Enabled Car Parking</a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li style="margin-right: 10px;"><a href="{{url_for('index')}}">Home</a></li>
+                    <li style="margin-right: 10px;"><a href="{{url_for('about')}}">About</a></li>
+                    <li style="margin-right: 10px;"><a href="{{url_for('why')}}">why us</a></li>
+                    <li style="margin-right: 10px;"><a href="{{url_for('testimonial')}}">Review</a></li>
+                    <li style="margin-right: 10px;"><button class="loginbtn" onclick="document.getElementById('login-form').style.display='block'" style="height: 50px;width: 100px;">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="login-form" class="login-page" style="display: block;">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn" style="left: 0px;"></div>
+                    <button type="button" onclick="login()" class="toggle-btn">Sign in</button>
+                    <button type="button" onclick="register()" class="toggle-btn">Sign up</button>
+                </div>
+                <form id="login" class="input-group-login" style="left: 50px;"action="" method="post">
+                    <input type="text" class="input-field" placeholder="Email Id" required="" value="">
+		    <input type="password" class="input-field" placeholder="Enter Password" required="" value="">
+		    <input type="checkbox" class="check-box"><span>Remember Password</span>
+            {% if error %}
+               <p class="error" style="color:red;font-size:small;font-family: 'Roboto',sans-serif;">Invalid UserId or password</p>
+            {% endif %}
+		    <button type="submit" class="submit-btn">Sign in</button>
+		 </form>
+		 <form id="register" class="input-group-register" style="left: 450px;" action="" method="post">
+		     <input type="text" class="input-field" name="firstname" placeholder="First Name" required="">
+		     <input type="text" class="input-field" name="lastname" placeholder="Last Name " required="">
+		     <input type="email" class="input-field" name="email" placeholder="Email Id" required="">
+		     <input type="password" class="input-field" id="password" name="password" placeholder="Enter Password" required=""value="">
+
+		     <input type="password" class="input-field" id="passwordconfirmation" name="passwordconfirmation" placeholder="Confirm password" required="">
+
+             <p id="password_error" style="color: red; font-family:'Roboto',sans-serif;font-size:small;"display:none>Password doesn't match</p>
+		     <input type="checkbox" class="check-box" style="margin-top: 12px;margin-bottom: 32px;"><span>I agree to the terms and                                                   conditions</span>
+
+                    <button type="submit" name="signup" value="signup" class="submit-btn">Sign up</button>
+                   
+                
+	         </form>
+            </div>
+        </div>
+    </div> 
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+     {% with messages = get_flashed_messages() %}
+       {% if messages %}
+      <ul class="flashes">
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+       {% endif %}
+      {% endwith %}
+
+    <script>
+      const passwordInput=document.getElementById('password');
+      const confirmInput=document.getElementById('passwordconfirmation');
+      const errorElement=document.getElementById('password_error');
+      function checkpassword(){
+        if(passwordInput.value !== confirmInput.value){
+            errorElement.style.display ='block';
+
+        }
+        else{
+            errorElement.style.display='none';
+        }
+     }
+     confirmInput.addEventListener('input',checkpassword);
+
+    </script> 
+
+  
+
+</body></html>

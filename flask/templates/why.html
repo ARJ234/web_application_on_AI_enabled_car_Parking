@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="../static/img/favicon.png" type="image/x-icon">
+
+  <title>Why us</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- nice selecy -->
+  <link rel="stylesheet" href="../static/css/nice-select.min.css">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="../static/css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="../static/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="../static/css/responsive.css" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <div class="bg-box">
+      <img src="../static/img/slider-bg.jpg" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              {% if firstname %} Welcome {{firstname}}!!
+              {% else %}
+              AI enabled car parking
+              {% endif %}
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('index')}}">Home </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('about')}}"> About</a>
+              </li>
+             
+              <li class="nav-item active">
+                <a class="nav-link" href="{{url_for('why')}}">Why Us <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('testimonial')}}">Review</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('signin')}}">Login</a>
+              </li>
+            </ul>
+            <form class="form-inline">
+              <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                <i class="fa fa-search" aria-hidden="false"></i>
+              </button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- why section -->
+
+  <section class="why_section layout_padding">
+    <div class="container">
+      <div class="col-md-10 px-0">
+        <div class="heading_container">
+          <h2>
+            Why Choose Us
+          </h2>
+          <p>
+            With our advanced technology, real-time updates, optimal space utilization, enhanced security, and expert support, we deliver convenience and peace of mind. Experience the future of parking management with AI Enabled Car Parking.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="static/img/w1.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                No Booking Fees
+              </h4>
+              <p>
+                At AI Enabled Car Parking, we believe in transparency and simplicity. That's why we don't charge any booking fees. Enjoy the convenience of reserving your parking space without any additional costs. Say goodbye to hidden fees and experience a seamless parking process with us.              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box">
+            <div class="img-box">
+              <img src="static/img/w2.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Online Payments
+              </h4>
+              <p>
+                Say goodbye to the hassle of carrying cash or searching for a payment kiosk. With our secure online payment platform, you can easily pay for your parking reservation or usage from the comfort of your own device. Enjoy a seamless and efficient payment process that saves you time and provides peace of mind.              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mx-auto">
+          <div class="box ">
+            <div class="img-box">
+              <img src="static/img/w3.png" alt="">
+            </div>
+            <div class="detail-box">
+              <h4>
+                Simple Booking Process
+              </h4>
+              <p>
+                Our booking process is simple and straightforward. With just a few clicks, you can reserve your parking space hassle-free. No complex forms or lengthy procedures.               </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end why section -->
+
+  <!-- info section -->
+  <section class="info_section ">
+
+    <div class="container">
+      <div class="info_top ">
+        <div class="row ">
+          <div class="col-md-6 col-lg-3 info_col">
+            <div class="info_form">
+              <h4>
+                Stay Connected
+              </h4>
+              <form action="">
+                <input type="text" placeholder="Enter Your Email" />
+                <button type="submit">
+                  Subscribe
+                </button>
+              </form>
+              <div class="social_box">
+                <a href="https://www.facebook.com/profile.php?id=100092605394340">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com/ArjNow71499">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/jayachandran-r-225721227/">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 info_col ">
+            <div class="info_detail">
+              <h4>
+                About Us
+              </h4>
+              <p>
+                Our cutting-edge AI algorithms and computer vision technology enable us to accurately monitor parking areas in real-time. By leveraging this data, we provide drivers with up-to-date information on available parking spots, allowing them to navigate directly to the nearest vacant space              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 info_col ">
+            <div class="info_detail">
+              <h4>
+                Online Booking
+              </h4>
+              <p>
+                Book your parking spot in advance with AI Enabled Car Parking. Say goodbye to the stress of finding a parking space on the spot.              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 info_col">
+            <h4>
+              Contact us
+            </h4>
+            <div class="contact_nav">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  India
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call : +91 9345667819
+                </span>
+              </a>
+              <a href="mailto:arj0654@gmail.com">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  Email : arj0654@gmail.com
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info_section -->
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">Free Html Templates</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="../static/javascript/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- nice select -->
+  <script src="../static/javascript/jquery.nice-select.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="../static/javascript/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script src="../static/javascript/custom.js"></script>
+
+
+</body>
+
+</html>
